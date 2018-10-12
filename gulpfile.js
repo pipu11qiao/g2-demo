@@ -15,7 +15,7 @@ gulp.task('server', function () {
 // 监视文件改变启动热更新
 gulp.task('watchAll', function () {
     gulp.watch([
-        'dev/html/*.html',
+        'dev/html/**/*.html',
     ], ['reload'])
 });
 
