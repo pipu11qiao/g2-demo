@@ -5,6 +5,7 @@
     <title>g2-demo</title>
     <link rel="stylesheet" href="../plugin/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../common/css/nav.css">
+    <link rel="stylesheet" href="../common/css/common.css">
     <script src="../common/js/jquery-1.9.1.min.js"></script>
     <script src="../plugin/bootstrap/js/bootstrap.min.js"></script>
     <script src="../common/js/nav.js"></script>
@@ -32,6 +33,22 @@
             </ul>
         </li>
         <li class="m-nav-item level-1">
+            <div class="m-content">项目用到的例子</div>
+            <ul class="m-nav-list">
+                <li class="m-nav-item level-2">
+                    <div class="m-content" data-href="./project/histogram.html">选项分布和分数分布</div>
+                </li>
+            </ul>
+        </li>
+        <li class="m-nav-item level-1">
+            <div class="m-content">Transform</div>
+            <ul class="m-nav-list">
+                <li class="m-nav-item level-2">
+                    <div class="m-content" data-href="./transform/percent.html">percent</div>
+                </li>
+            </ul>
+        </li>
+        <li class="m-nav-item level-1">
             <div class="m-content">DataSet</div>
             <ul class="m-nav-list">
                 <li class="m-nav-item level-2">
@@ -48,16 +65,12 @@
                 <li class="m-nav-item level-2">
                     <div class="m-content" data-href="./attr/color_city.html">city_color</div>
                 </li>
-                <li class="m-nav-item level-2">
-                    <div class="m-content" data-href="./DataSet/relativeChart.html">relativeChart</div>
-                </li>
             </ul>
         </li>
     </ul>
 </div>
 <script>
     $('.nav_box ').easyNav({
-        one: true
     });
 </script>
 </body>
