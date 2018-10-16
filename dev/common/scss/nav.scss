@@ -1,0 +1,72 @@
+@mixin levelSet($level){
+    padding-left: ($level - 1) * 30px;
+}
+.m-nav-list{
+    list-style: none;
+    padding-inline-start: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height .3s;
+    &.root{
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        height: auto;
+    }
+    .m-nav-item{
+        list-style: none;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: -1px;
+        .m-content{
+            position: relative;
+            display: block;
+            padding: 10px 15px;
+            background-color: #fff;
+            color: #555;
+            &.link{
+                &:hover{
+                    color: #555;
+                    text-decoration: none;
+                    background-color: #f5f5f5;
+                }
+                cursor: pointer;
+            }
+            &.with-arrow{
+                padding-left: 35px;
+            }
+            &>a{
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 30px;
+                .glyphicon{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    font-size: 15px;
+                    transition: transform .3s;
+                }
+            }
+            &.m-up>a .glyphicon{
+                transform: translate(-50%,-50%) rotate(0);
+            }
+            &.m-down>a .glyphicon{
+
+                transform: translate(-50%,-50%) rotate(180deg);
+            }
+        }
+        &.level-1{
+            @include levelSet(1)
+        }
+        &.level-2{
+            @include levelSet(2)
+        }
+        &.level-3{
+            @include levelSet(3)
+        }
+    }
+}

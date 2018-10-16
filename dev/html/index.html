@@ -4,28 +4,61 @@
     <meta charset="utf-8">
     <title>g2-demo</title>
     <link rel="stylesheet" href="../plugin/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../common/css/nav.css">
     <script src="../common/js/jquery-1.9.1.min.js"></script>
     <script src="../plugin/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../common/js/nav.js"></script>
+    <style>
+        .nav-box{
+            padding: 0 100px;
+        }
+    </style>
 </head>
 <body>
 <div class="page-header">
-    <h1>g2 demo</small></h1>
+    <h1 class="text-center">g2 demo</small></h1>
 </div>
-<ul class="m-nav-box">
-    <!--<li>-->
-        <!--<div data-type="texg"></div>-->
-        <!--<div data-type="link" data-href="./base/base.html">base</div>-->
-        <!--<a href="" class="list-group-item"></a>-->
-        <!--<ul></ul>-->
-    <!--</li>-->
-    <div class="list-group">
-        <a href="./base/createBase.html" class="list-group-item">create</a>
-        <a href="#" class="divider"></a>
-        <a href="./DataSet/DataSet.html" class="list-group-item">DataSet</a>
-        <a href="./DataSet/relativeChart.html" class="list-group-item">relativeChart</a>
-        <a href="./attr/color_city.html" class="list-group-item">city_color</a>
-    </div>
-</ul>
-
+<div class="nav-box">
+    <ul class="m-nav-list nav_box">
+        <li class="m-nav-item level-1">
+            <div class="m-content">base</div>
+            <ul class="m-nav-list">
+                <li class="m-nav-item level-2">
+                    <div class="m-content" data-href="./base/base.html">base.page</div>
+                </li>
+                <li class="m-nav-item level-2">
+                    <div class="m-content" data-href="./base/createBase.html">create</div>
+                </li>
+            </ul>
+        </li>
+        <li class="m-nav-item level-1">
+            <div class="m-content">DataSet</div>
+            <ul class="m-nav-list">
+                <li class="m-nav-item level-2">
+                    <div class="m-content" data-href="./DataSet/DataSet.html">DataSet</div>
+                </li>
+                <li class="m-nav-item level-2">
+                    <div class="m-content" data-href="./DataSet/relativeChart.html">relativeChart</div>
+                </li>
+            </ul>
+        </li>
+        <li class="m-nav-item level-1">
+            <div class="m-content">attr</div>
+            <ul class="m-nav-list">
+                <li class="m-nav-item level-2">
+                    <div class="m-content" data-href="./attr/color_city.html">city_color</div>
+                </li>
+                <li class="m-nav-item level-2">
+                    <div class="m-content" data-href="./DataSet/relativeChart.html">relativeChart</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script>
+    $('.nav_box ').easyNav({
+        one: true
+    });
+</script>
 </body>
 </html>
